@@ -246,6 +246,16 @@ new DynamicSelect('#dynamic-select', {
     }
 });
 ```
+
+Responsive grid example:
+```javascript
+new DynamicSelect('#dynamic-select', {
+    dropdownClass: 'grid',
+    dropdownStyle: 'grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));'
+});
+```
+**NOTE**: class `.grid` conflicts with option: `columns`, since default display of `<dynamic-select>` elements is `flex`.
+
 **More Advanced Examples** - https://jsfiddle.net/sat6h1r4/
 
 <br>
