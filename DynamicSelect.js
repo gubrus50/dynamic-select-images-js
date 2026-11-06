@@ -147,7 +147,8 @@ class DynamicSelect {
         this.open = () =>   {(!this.disabled) && header.classList.add('dynamic-select-header-active'); this.scrollToSelectedOption()}
         this.close = () =>   (!this.disabled) && header.classList.remove('dynamic-select-header-active');
         this.toggle = () => {(!this.disabled) && header.classList.toggle('dynamic-select-header-active'); this.scrollToSelectedOption()}
-
+        this.value = () =>     this.element.querySelector(`input[name="${this.name}"]`).value || null;
+        
         this.element.querySelectorAll('.dynamic-select-option').forEach(option =>
         option.addEventListener('click', () => this.optionElement = option));
 
